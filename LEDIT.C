@@ -7,9 +7,9 @@ int height=1;
 int dwidth=80;
 int dheight=300;
 int dstart=1;
-int maxlen=100000;
+int maxlen=24000;
 int x=1,y=1;
-char a[100001]={};
+char a[24002]={};
 
 int check();
 void pull(int temp);
@@ -91,7 +91,7 @@ void init()
 {
   int i=0;
   x=1;y=1;
-  for (i=0;i<=maxlen;i++)
+  for (i=0;i<=maxlen+1;i++)
     a[i]=0;
   for (i=0;i<=3000;i++)
     width[i]=0;
@@ -148,7 +148,7 @@ void fr()
   i=1;
   while ((ch=getc(fp))!=EOF)
   {
-    if (i==maxlen) break;
+    if (i>maxlen) break;
     a[i]=ch+c;
     i++;
   }
@@ -345,7 +345,7 @@ int cursor(char ch)
   }
   if (ch=='C')
   {
-  if ((y<width[x])) y=y+1; else
+  if ((y<width[x])&&(y<dwidth)) y=y+1; else
   if ((y==width[x])&&(x<height)) {x=x+1;y=1;if (x>(22+dstart)) dstart++;}
   prin(1);
   return 1;
