@@ -1,3 +1,4 @@
+# Now, We're going to restruct whole project in Rust.
 # LEDIT
 A simple editor on the Linux &amp; Windows  
 [![asciicast](https://asciinema.org/a/43rh0ovp7hpr0bwuhr6nfpskg.png)](https://asciinema.org/a/43rh0ovp7hpr0bwuhr6nfpskg)  
